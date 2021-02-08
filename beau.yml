@@ -1,0 +1,14 @@
+endpoint: http://localhost:4567/v1
+
+environment:
+  _:
+    latitude: 47.1923146
+    longitude: -114.0890228
+    n: 5
+
+GET /satellites:
+  alias: satellites
+  params:
+    latitude: $env._.latitude
+    longitude: $env._.longitude
+    n: $env._.n
